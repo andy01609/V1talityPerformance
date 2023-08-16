@@ -35,3 +35,27 @@ navbarLinks.forEach(function(link) {
     this.classList.add('active');
   });
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const scrollableContainer = document.querySelector('.horizontal-scrollable-container');
+  let plansRevealed = false;
+
+  function getMaxScrollLeft() {
+      const buffer = 50;
+      return scrollableContainer.scrollWidth - scrollableContainer.clientWidth - buffer;
+  }
+
+  scrollableContainer.addEventListener('scroll', function() {
+      if (plansRevealed) {
+          return;
+      }
+
+   
+      
+  });
+
+  // Adjust the maxScrollLeft calculation when the window is resized
+  window.addEventListener('resize', getMaxScrollLeft);
+});
